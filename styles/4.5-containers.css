@@ -1,4 +1,7 @@
 /* ---------------------- PADDINGS ---------------------- */
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .padding-container {
     padding: 5.0625rem 0;
