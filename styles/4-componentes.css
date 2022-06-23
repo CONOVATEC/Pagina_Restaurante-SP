@@ -11,6 +11,15 @@
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
+    transition: all 300ms;
+}
+.btn-primario:hover {
+    transform: scale(1.07);
+}
+
+.btn-primario--red {
+    background: var(--color-primario);
+    border: 2px solid var(--color-primario);
 }
 
 /* ------------------------ TITLE ----------------------- */

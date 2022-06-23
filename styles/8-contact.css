@@ -16,12 +16,32 @@
     gap: 2.1875rem;
     height: 100%;
 }
-.form-reservacion input[type="email"],
-input[type="tel"],
-select {
+.form-reservacion .form-input {
     padding: 0.5rem;
     font-size: 1.25rem;
     font-weight: 500;
+}
+.select-container select {
+    width: 100%;
+}
+.select-container {
+    width: 100%;
+    position: relative;
+}
+
+.form-reservacion .select-container::after {
+    text-align: center;
+    background: var(--color-blanco);
+    margin-top: 1px;
+    margin-right: 4px;
+    height: 25px;
+    color: var(--color-primario);
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+    content: "\025be";
 }
 .form-reservacion h3 {
     font-size: 1.875rem;
