@@ -56,6 +56,7 @@
     grid-template-columns: calc(50% - 1rem) calc(25% - 1rem) calc(25%);
     gap: 1.5rem;
     margin-top: 5.0625rem;
+    position: relative;
 }
 
 .galeria-item {
@@ -119,54 +120,68 @@
     cursor: pointer;
 }
 /* ------------------------ MODAL ----------------------- */
-.modal-menu-container {
-    left: 100%;
+.wrapper-modal-gallery.active {
     position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    z-index: 3;
+    display: grid;
+    place-content: center;
+}
+.wrapper-modal-gallery {
+    display: none;
 }
 
-.modal-menu-container.active {
-    display: flex;
-    height: 100%;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0%;
-    background: var(--color-blanco);
-    width: 100%;
+.modal-gallery {
+    max-width: 560px;
+    position: relative;
+
     transition: all 300ms;
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.4);
+    animation: openItem 500ms ease-in-out;
+}
+@keyframes openItem {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .close {
-    width: 24px;
-    height: 24px;
-    background: url(/icons/close.svg) center no-repeat;
+    width: 18px;
+    height: 18px;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
+    top: -25px;
+    right: 0;
+    background: url(../icons/close.png) no-repeat;
+}
+.modal-gallery__img {
+    width: 100%;
 }
 
-.wrapper-img {
-    width: 45%;
-    background: url(/img/menu/gallery-1.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.modal-gallery__content {
+    background: var(--color-blanco);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+.modal-gallery__name {
+    color: var(--color-secundario);
 }
 
-.wrapper-plato {
-    font-size: 1rem;
-    padding: 3rem;
-    width: 55%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+.modal-gallery__price {
+    font-weight: 700;
 }
-.wrapper-plato .receta-title {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.wrapper-plato .receta-title h2 {
-    font-weight: 800;
+.modal-gallery__add {
+    padding: 0.6rem 1.5rem;
+    font-size: 14px;
 }
 
 /* -------------------- MEDIA QUERIES ------------------- */
@@ -189,5 +204,21 @@
     }
     .galeria-ofertas-container {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+@media screen and (max-width: 576px) {
+    .modal-gallery {
+        height: 100%;
+
+        overflow: scroll;
+    }
+    .modal-gallery__img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    .close {
+        top: 25px;
+        right: 25px;
     }
 }

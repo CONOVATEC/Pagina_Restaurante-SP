@@ -33,7 +33,7 @@
 
         </div>
     </header>
-    
+
     <!------BARRA DE NAVEGACIÓN--------------------------------------->
     <nav class="navbar">
 
@@ -57,6 +57,9 @@
                 <li><a href="/nosotros.html">Nosotros</a></li>
                 <li><a href="/menu.html">Menú</a></li>
                 <li><a href="/contact.html">Contacto</a></li>
+                <li><a href="/register.html">Registrate</a></li>
+                <li><a href="/loggin.html">Iniciar Sesión</a></li>
+
             </ul>
         </div>
     </nav>
@@ -81,27 +84,33 @@
             <div class="presentacion__img">
 
             </div>
-            <div class="presentacion__content">
+            <div class="container-form">
                 <form class="form-reservacion" action="">
                     <h3>Haz tu Reservación</h3>
+                    <input class="form-input" type="text" name="name" id="name" placeholder="Nombre">
+                    <input class="form-input" type="email" name="email" id="email" placeholder="Email">
+                    <input class="form-input" type="tel" name="tel" id="tel" placeholder="Numero de telefono">
 
-                    <select name="cantidad-personas" id="">
-                        <option label="Cantidad de Personas" value="0"></option>
-                        <option label="De 1 a 2 personas" value="1-2"></option>
-                        <option label="De 2 a 5 personas" value="2-5"></option>
-                        <option label="De 5 a 8 personas" value="5-8"></option>
-                    </select>
+                    <div class="select-container">
+                        <select class="form-input" name="cantidad-personas" id="cantidad-personas">
+                            <option label="Cantidad de Personas" value="0"></option>
+                            <option label="De 1 a 2 personas" value="1-2"></option>
+                            <option label="De 2 a 5 personas" value="2-5"></option>
+                            <option label="De 5 a 8 personas" value="5-8"></option>
+                        </select>
+                    </div>
 
-                    <input type="email" name="email" id="email" placeholder="Email">
 
-                    <select name="hora" id="">
-                        <option label="Seleccione la Hora" value="0"></option>
-                        <option label="8am-12pm" value="8am-12pm"></option>
-                        <option label="12pm-4pm" value="12pm-4pm"></option>
-                        <option label="4pm-8pm" value="4pm-8pm"></option>
-                    </select>
-                    <input type="tel" name="tel" id="tel" placeholder="Numero de telefono">
-                    <input class="btn-primario" type="submit" value="Reservación">
+                    <div class="select-container">
+                        <select class="form-input" name="hora" id="">
+                            <option label="Seleccione la Hora" value="0"></option>
+                            <option label="8am-12pm" value="8am-12pm"></option>
+                            <option label="12pm-4pm" value="12pm-4pm"></option>
+                            <option label="4pm-8pm" value="4pm-8pm"></option>
+                        </select>
+                    </div>
+
+                    <input class=" btn-primario" type="submit" value="Reservación">
 
                 </form>
             </div>
@@ -128,7 +137,7 @@
 
     </section>
 
-
+    <script src="https://kit.fontawesome.com/2da10ca441.js" crossorigin="anonymous"></script>
     <script src="js/scroll.js"></script>
 
 </body>
