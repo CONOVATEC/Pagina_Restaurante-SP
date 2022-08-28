@@ -10,7 +10,7 @@ Este es el Proyecto final de nuestro curso "Aprendiendo con NKI". Se solicito un
 
 - Bambamxx
 - Fernando5498
-- Adriancapchaq
+- adriancapchaq (https://github.com/adriancapchaq)
 
 
 ## 🛠 Tecnologias Utilizadas
