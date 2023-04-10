@@ -34,7 +34,7 @@ select {
     display: block;
     margin: 0 0px 0px auto;
     padding-right: 5rem;
-    width: 70%;
+    width: 20%;
     min-height: 600px;
 }
 
@@ -49,6 +49,5 @@ select {
 .nota-flotante-right{
     display: block;
     margin: 0 0px 0px auto;
-    padding-right: 5rem;
     width: 20%;
 }
