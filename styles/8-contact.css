@@ -7,6 +7,7 @@
     position: relative;
 }
 
+
 /* ------------------------ FORM ------------------------ */
 .form-reservacion {
     display: flex;
@@ -43,4 +44,11 @@ select {
         padding: 0 1rem;
         margin: 0 auto;
     }
+}
+
+.nota-flotante-right{
+    display: block;
+    margin: 0 0px 0px auto;
+    padding-right: 5rem;
+    width: 20%;
 }
