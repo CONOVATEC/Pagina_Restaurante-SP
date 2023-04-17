@@ -18,237 +18,321 @@
 */
 
 .carousel {
-    /*ejemplo 2
+  /*ejemplo 2
     width: 95%;
     */
-    max-width: 100%;
-    justify-content: center;
-    background-color: lightskyblue;
-    overflow: hidden;
+  max-width: 100%;
+  justify-content: center;
+  background-color: lightskyblue;
+  overflow: hidden;
 }
 
 .carousel .big-container {
-    width: 200%;
-    background-color: orange;
+  width: 200%;
+  background-color: orange;
 
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
 
-    transition: all 0.5s ease;
-    transform: translateX(0%);
+  transition: all 0.5s ease;
+  transform: translateX(0%);
 }
 
 .carousel .img {
-    width: calc(100% / 2);
-    background-color: lime;
+  width: calc(100% / 2);
+  background-color: lime;
 }
 
 .carousel .points {
-    width: 100%;
-    background-color: red;
-    padding: 0 1em;
+  width: 100%;
+  background-color: red;
+  padding: 0 1em;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel .point {
-    width: 0.8em;
-    height: 0.8em;
-    margin: 1%;
-    list-style: none;
-    border-radius: 50%;
-    background-color: lightskyblue;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 1%;
+  list-style: none;
+  border-radius: 50%;
+  background-color: lightskyblue;
 }
 
 .carousel .point.active {
-    background-color: orange;
+  background-color: orange;
 }
-
 
 /*Texto el mejor lugar para comer*/
 .bestPlace {
-    max-width: 100%;
-    width: 100%;
-    height: 15vw;
-    display: grid;
-    place-content: center;
+  max-width: 100%;
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.bestPlace h2 {
+  font-weight: 400;
+  color: var(--color-secundario);
+  font-size: 1.7rem;
+  text-align: center;
 }
 
 .bestPlace p {
-    font-weight: 400;
-    color: var(--color-secundario);
-    font-size: 3.5vw;
+  text-align: center;
 }
-
 
 /*Imagen de cocina y texto "El mejor lugar para comer"---*/
 .cocina {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    margin-bottom: 10%;
-    background-color: #8e1719;
-    color: white;
-
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #8e1719;
+  color: white;
+  margin-bottom: 7rem;
 }
 
 .cocina img {
-    width: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cocina p {
-    float: right;
-    width: 50%;
-    font-size: 3vw;
-    text-align: center;
-    /*centrar el texto con grid*/
-    display: grid;
-    place-content: center;
-    
+@media (min-width: 768px) {
+  .cocina {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+.cocina-seccion-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 0;
+  gap: 1rem;
+  text-align: center;
+}
+
+.cocina-seccion-02 p {
+  font-size: 1.8rem;
+}
+
+.cocina-seccion-02 i {
+  text-align: center;
+  color: var(--color-secundario);
+  font-size: 4rem;
+}
+/* Bisteck */
 
 .bisteck {
+  max-width: 100%;
+  width: 100%;
+  height: 540px;
+  display: grid;
+  background-image: url(../img/inicio/home-seccion\ 2.png);
+  background-size: cover;
+  background-position: center center;
+  font-size: 1.3rem;
+  border-radius: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  .bisteck {
+    height: 480px;
+  }
+}
+
+.bisteck-carta {
+  background-color: #8e1719;
+  padding: 1.5rem 1.8rem;
+  width: 90%;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bisteck-carta > h3 {
+  color: var(--color-secundario);
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .bisteck {
     position: relative;
-    max-width: 100%;
-    width: 100%;
-    display: grid;
-}
+  }
 
-.bisteck img {
-    width: 100%;
-}
-
-.bisteck p {
+  .bisteck-carta {
     position: absolute;
-    background-color: #8e1719;
-    color: white;
-    font-size: 3vw;
-    text-align: center;
-    right:0;
-    left: 0;
-    top: 0;
-    bottom: 70%;
-    display: grid;
-    place-content: center;
+    left: 10%;
+    top: -10%;
+    width: fit-content;
+    padding: 3rem 3.4rem;
+  }
 }
 
 /*--Redes sociales------------------------*/
 
 .social {
-    display: flex;
-    flex-direction: column;
-    margin: 1vw;
-    gap: 5vw;
-
-    /*El tamaño de los iconos se cambia con font-size*/
-
-    font-size: 10vw;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .social p {
-    display: grid;
-    place-content: center;
-    font-size: 5vw;
-    color: #8e1719;
+  /* Para titulo de Redes sociales */
+  display: grid;
+  place-content: center;
+  color: #8e1719;
+  font-size: 1.7rem;
+  text-align: center;
 }
 
 .social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 2rem;
 }
 
 .social-icons a {
-    color: #8e1719;
-    size: 15vw;
-
+  color: #8e1719;
 }
 
 /*--formulario registro de correo---------*/
 
+.presentacion__content-home {
+  background-color: #8e1719;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.form-reservacion-home {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-reservacion-home > h3 {
+  font-size: 1.6rem;
+}
+
+.input-form {
+  padding: 0.8rem 1rem;
+}
+
+.btn-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .btn-home {
+    width: fit-content;
+    display: block;
+  }
+}
+
 .email-form {
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 3vw;
+  color: var(--color-blanco);
+  background-color: var(--color-primario);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3vw;
 }
 
 .email-form h3 {
-    display: grid;
-    place-content: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 3.5vw;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3.5vw;
 }
 
 .email-form p {
-    margin-bottom: 2vw;
+  margin-bottom: 2vw;
 }
 
 /*footer----------------------------------*/
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    background-color: #1e1e1e;
-    color: white;
-    margin: 1vw 0 0 0;
-    padding: 1vw;
-    font-size: 3vw ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1vw;
+  font-size: 3vw;
 }
 
 .footer-logo {
-    display: grid;
-    place-content: center;
+  display: grid;
+  place-content: center;
 }
 
 .footer-logo img {
-    width:  15vw;
-    height: 15vw;
+  width: 15vw;
+  height: 15vw;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    font-size: 2vw;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2vw;
 }
 
 .footer-content ul {
-    list-style: none;
-    margin: 0 0 1vw 0;
+  list-style: none;
+  margin: 0 0 1vw 0;
 }
 
 .footer-content li {
-    font-size: 1.3vw;
+  font-size: 1.3vw;
 }
 
 .footer-content li a {
-    display:flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    font-size: 1.3vw;
-    text-decoration: none;
-    color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: white;
 }
 
-.footer-content li a:hover{
-    color: #8e1719
+.footer-content li a:hover {
+  color: #8e1719;
 }
 
 .reserve {
-    display: grid;
-    place-content: center;
-    font-size: 1vw;
-    background-color: black;
-    text-align: center;
-    padding: 1vw 0 1vw 0;
+  display: grid;
+  place-content: center;
+  font-size: 1vw;
+  background-color: black;
+  text-align: center;
+  padding: 1vw 0 1vw 0;
 }
-
-
