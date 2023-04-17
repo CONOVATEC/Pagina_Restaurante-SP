@@ -87,7 +87,85 @@
 }
 
 .nota-flotante-right{
+    
     display: block;
     margin: 0 0px 0px auto;
     width: 20%;
 }
+/*<-------------------------------------------------------------------------->*
+/*Estilo responsive de la imagen antes del Form*/
+
+@media (max-width: 760px) {
+    .contact--banner {
+      background-image: url(../img/contacto/banner-movil.png);
+    }
+  
+    .seccion-ubicacion {
+      position: relative;
+    }
+  }
+  
+  
+
+/*Apartador Movil del formulario de contacto */
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    /* Estilos para el contenedor principal */
+    .container-form {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    /* Estilos para el formulario */
+    .form-reservacion {
+      max-width: 100%;
+    }
+  
+    /* Estilos para los inputs */
+    .form-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Estilos para los select */
+    .select-container {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .select-container select {
+      width: 100%;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+  
+    .select-container:after {
+      content: "\f107";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: #ccc;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  
+    /* Estilos para el botón */
+    .btn-primario {
+      width: 100%;
+      align-items: center;
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .nota-flotante-right {
+      width: 100%;
+      margin: 2rem auto;
+      text-align: center;
+    }
+  }
+  
