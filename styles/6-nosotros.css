@@ -71,7 +71,7 @@
     position: relative;
     width: 80%;
     margin: 0 auto;
-    padding: 4px 0 4px 4px;
+    padding: 2px 2px 2px 2px;
     overflow: hidden;
 }
 .comentarios-container {
@@ -82,7 +82,7 @@
 .comentario {
     padding: 3rem;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.212);
-    width: 33.333%;
+    width: calc(100% / 3);
     padding: 20px;
     box-sizing: border-box;
 }
