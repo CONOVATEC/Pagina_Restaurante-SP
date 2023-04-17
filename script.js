@@ -50,3 +50,26 @@ point.forEach((eachPoint, i) => {
 function register() {
     const name = document.getElementById("form-name").value;const email = document.getElementById("form-email").value;
 }
+// carrusel comentarios-nosotros
+const carruselItems = document.querySelector('.comentarios-container');
+const carruselControls = document.querySelectorAll('.comentario-slider-rounded__round');
+let autoSlideInterval;
+
+const autoSlide=()=>{
+    const activeControl=document.querySelector('.comentario-slider-rounded__round.active')
+    const nextIndex= (parseInt(activeControl.dataset.index)+1) % carruselControls.length
+    carruselItems.style.transform=`translateX(-${nextIndex*33.333}%)`
+    carruselControls.forEach(control=>control.classList.remove("active"))
+    carruselControls[nextIndex].classList.add("active")
+}
+const closeInterval=()=> clearInterval(autoSlideInterval)
+carruselControls.forEach((control) => {
+    control.addEventListener('click', (e) => {
+        const clickedIndex = parseInt(e.target.dataset.index);
+        carruselItems.style.transform = `translateX(-${clickedIndex * 33.333}%)`;
+        carruselControls.forEach((ctrl) => ctrl.classList.remove('active'));
+        control.classList.add('active');
+        closeInterval()
+    })
+})
+autoSlideInterval= setInterval(autoSlide,4000)
