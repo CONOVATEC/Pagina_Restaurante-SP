@@ -131,3 +131,15 @@
         flex-basis: 220px;
     }
 }
+
+.nota-flotante {
+    display: block;
+    margin: 0 0px 0px auto;
+    top: 10%;
+    width: 30%;
+}
+
+.nosotros__img {
+    display: block;
+    width: 70%;
+}
