@@ -1,0 +1,78 @@
+/* ----------------------- CLASES ----------------------- */
+/* ! Es necesario añadir el archivo scroll.js al html y poner la clase en el elemento que quieren animar. Cree 5 animaciones distintas, */
+
+/* ? las animaciones comentadas son referencia de las que se aplican con el scroll.js */
+
+.animation-fadeIn {
+    /* animation: fadeIn 1.7s ease-in-out; */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animation-fadeInLeft {
+    /* animation: fadeInLeft 1.7s ease-in-out; */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(100%);
+
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.animation-fadeInRight {
+    /* animation: fadeInRight 1.7s ease-in-out; */
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(-100%);
+
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.animation-fadeInTop {
+    /* animation: fadeInTop 1.7s ease-in-out; */
+}
+
+@keyframes fadeInTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.animation-fadeInBottom {
+    /* animation: fadeInBottom 1.7s ease-in-out; */
+}
+
+@keyframes fadeInBottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

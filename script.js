@@ -9,7 +9,7 @@ toggleButton.addEventListener("click", () => {
 
 
 
-//Carrusel------------------------------------------------>
+//carousel------------------------------------------------>
 
 const bigContainer = document.querySelector(".big-container");
 const point = document.querySelectorAll(".point");
@@ -48,80 +48,40 @@ point.forEach((eachPoint, i) => {
 
 //Formulario registro
 function register() {
-    const user = document.getElementById("user").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const passwordConfirmation = document.getElementById("passwordConfirmation").value;
-
-//4
-    if (user == "" && email == "" && password == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar usuario, correo, la contraseña y su confirmación");
-    }
-//3
-    else if (email == "" && password == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar correo, la contraseña y su confirmación");
-    }
-
-    else if (user == "" && password == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar usuario, la contraseña y su confirmación");
-    }
-
-    else if (user == "" && email == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar usuario, correo y confirmar la contraseña");
-    }
-
-    else if (user == "" && email == "" && password == "") {
-        alert("Favor de ingresar usuario, correo y contraseña");
-    }
-
-//2
-    else if (user == "" && email == "") {
-        alert("Favor de ingresar usuario y correo");
-    }
-
-    else if (user == "" && password == "") {
-        alert("Favor de ingresar usuario y contraseña");
-    }
-
-    else if (user == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar usuario y la confirmación de la contraseña");
-    }
-
-    else if (email == "" && password == "") {
-        alert("Favor de ingresar correo y contraseña");
-    }
-
-    else if (email == "" && passwordConfirmation == "") {
-        alert("Favor de ingresar correo y la confirmación de la contraseña");
-    }
-//1
-    else if (user == "" ) {
-        alert("Usuario vacio");
-    }
-
-    else if (email == "") {
-        alert("Correo vacio");
-    }
-
-    else if (password == "") {
-        alert("Contraseña vacia");
-    }
-
-    else if (password.length < 6) {
-        alert("La contraseña debe contener al menos 6 caracteres"); 
-    }
-
-    else if (password.length >= 6) {
-
-        if (passwordConfirmation == "") {
-            alert("Favor de confirmar la contraseña");
-        }   
-        
-        else if (passwordConfirmation === password && user != "" && email != ""){
-            alert("Registro exitoso");
-        }
-        else {
-            alert("Las contraseñas no coinciden")
-        }
-    }
+    const name = document.getElementById("form-name").value;const email = document.getElementById("form-email").value;
 }
+// funcionalidad de un carrusel
+function carouselFunctionality(numberItems, carouselSelector,controlsSelector,controlSelectorActivated, activatedClass,autoSlideDelay){
+    const carouselItems = document.querySelector(carouselSelector);
+    const carouselControls = document.querySelectorAll(controlsSelector);
+    let autoSlideInterval;
+    let widthPercentageForEachItem= 100/numberItems
+
+    const autoSlide=()=>{
+        const activeControl=document.querySelector(controlSelectorActivated)
+        const nextIndex= (parseInt(activeControl.dataset.index)+1) % carouselControls.length
+        carouselItems.style.transform=`translateX(-${nextIndex * widthPercentageForEachItem}%)`
+        carouselControls.forEach(control=>control.classList.remove(activatedClass))
+        carouselControls[nextIndex].classList.add(activatedClass)
+    }
+    const closeInterval=()=> clearInterval(autoSlideInterval)
+    carouselControls.forEach((control) => {
+        control.addEventListener("click", (e) => {
+            const clickedIndex = parseInt(e.target.dataset.index);
+            carouselItems.style.transform = `translateX(-${clickedIndex * widthPercentageForEachItem}%)`;
+            carouselControls.forEach((ctrl) => ctrl.classList.remove(activatedClass));
+            control.classList.add(activatedClass);
+            closeInterval()
+        })
+    })
+    autoSlideInterval= setInterval(autoSlide,autoSlideDelay)
+}
+// Carrusel Nosotros/comentarios
+carouselFunctionality(
+    3,
+    ".comentarios-container",
+    ".comentario-slider-rounded__round",
+    ".comentario-slider-rounded__round.active",
+    "active",
+    4000
+)
