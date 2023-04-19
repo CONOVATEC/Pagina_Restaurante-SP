@@ -42,7 +42,14 @@
 
 .carousel .img {
   width: calc(100% / 2);
+  height: 500px;
   background-color: lime;
+}
+
+@media (max-width: 768px) {
+  .carousel .img {
+    height: 350px;
+  }
 }
 
 .carousel .points {

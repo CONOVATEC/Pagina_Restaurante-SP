@@ -8,38 +8,24 @@
 }
 
 .navbar {
-    display: flex;
-
-    /*space-between los alinea a los extremos a diferencia de space-around*/
-    justify-content: space-between;
-
-    align-items: center;
-    max-width: 100%;
-    height: fit-content;
+    width: 100%;
     background-color: #1e1e1e;
-    color: white;
 
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-logo {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
+    margin-left: 1rem;
 }
+
 .navbar-logo img {
     text-align: center;
     width: 3rem; /*intentar con 15 vw*/
     height: 3rem; /*intentar con 15 vw*/
     padding: 5% 5% 5% 5%;
 }
-
-/* titulo si es necesario, la imagen ya la tiene
-.brand-title {
-    font-size: 1.5rem;
-    padding-left: .5rem;
-}
-*/
 
 .navbar-links ul {
     margin: 0;
@@ -64,27 +50,35 @@
 }
 
 .toggle-button {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
     width: 1.8rem;
     height: 1.5rem;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .toggle-button .bar {
-    height: 3px;
     width: 100%;
+    height: 25%;
     background-color: white;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 /* hacemos aparecer un boton desplegable si el ancho es menor a *500px*/
 @media (max-width: 768px) {
     .toggle-button {
+        width: 1.6rem;
+        height: 1.3rem;
+        margin-right: 1rem;
+        cursor: pointer;
+
         display: flex;
-        align-self: end;
-        margin: .8rem 1rem 0 0;
+    }
+
+    .toggle-button .bar {
+        height: 18%;
     }
 
     /*Ocultamos el titulo para que no ocupe mucho espacio*/
@@ -94,14 +88,19 @@
 
     /*ocultamos los links y hacemos que ocupe el tamaño del contenedor*/
     .navbar-links {
-        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
         width: 100%;
+        background-color: #1e1e1e;
+        z-index: 100;
+
+        display: none;
     }
 
     /*Lo ponemos debajo y luego lo movemos a la izquierda*/
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        align-content: center;
     }
 
     /*centramos y lo ponemos en forma de columna/lista*/
