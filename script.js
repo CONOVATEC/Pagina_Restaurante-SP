@@ -9,7 +9,7 @@ toggleButton.addEventListener("click", () => {
 
 
 
-//Carrusel------------------------------------------------>
+//carousel------------------------------------------------>
 
 const bigContainer = document.querySelector(".big-container");
 const point = document.querySelectorAll(".point");
@@ -50,3 +50,38 @@ point.forEach((eachPoint, i) => {
 function register() {
     const name = document.getElementById("form-name").value;const email = document.getElementById("form-email").value;
 }
+// funcionalidad de un carrusel
+function carouselFunctionality(numberItems, carouselSelector,controlsSelector,controlSelectorActivated, activatedClass,autoSlideDelay){
+    const carouselItems = document.querySelector(carouselSelector);
+    const carouselControls = document.querySelectorAll(controlsSelector);
+    let autoSlideInterval;
+    let widthPercentageForEachItem= 100/numberItems
+
+    const autoSlide=()=>{
+        const activeControl=document.querySelector(controlSelectorActivated)
+        const nextIndex= (parseInt(activeControl.dataset.index)+1) % carouselControls.length
+        carouselItems.style.transform=`translateX(-${nextIndex * widthPercentageForEachItem}%)`
+        carouselControls.forEach(control=>control.classList.remove(activatedClass))
+        carouselControls[nextIndex].classList.add(activatedClass)
+    }
+    const closeInterval=()=> clearInterval(autoSlideInterval)
+    carouselControls.forEach((control) => {
+        control.addEventListener("click", (e) => {
+            const clickedIndex = parseInt(e.target.dataset.index);
+            carouselItems.style.transform = `translateX(-${clickedIndex * widthPercentageForEachItem}%)`;
+            carouselControls.forEach((ctrl) => ctrl.classList.remove(activatedClass));
+            control.classList.add(activatedClass);
+            closeInterval()
+        })
+    })
+    autoSlideInterval= setInterval(autoSlide,autoSlideDelay)
+}
+// Carrusel Nosotros/comentarios
+carouselFunctionality(
+    3,
+    ".comentarios-container",
+    ".comentario-slider-rounded__round",
+    ".comentario-slider-rounded__round.active",
+    "active",
+    4000
+)
