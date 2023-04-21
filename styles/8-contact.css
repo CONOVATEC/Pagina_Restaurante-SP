@@ -169,3 +169,8 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .select-container:after {
+    display: none;
+    }
+    }
