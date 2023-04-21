@@ -294,7 +294,15 @@
   background-color: #1e1e1e;
   color: white;
   padding: 1vw;
-  font-size: 3vw;
+}
+.footer a{
+  transition: color 0.3s ease;
+  color: #f2fae4;
+}
+.footer a:hover,
+.footer summary:hover{
+  color: #ff8b00;
+  cursor: pointer;
 }
 
 .footer-logo {
@@ -303,42 +311,37 @@
 }
 
 .footer-logo img {
-  width: 15vw;
-  height: 15vw;
+  width: 240px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  font-size: 2vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-bottom:25px;
+}
+
+.footer-content summary{
+  font-size: 18px;
+  width: 183px;
+  color: #c7cfef;
+  transition: color 0.3s ease;
 }
 
 .footer-content ul {
+  padding-left: 20px;
   list-style: none;
-  margin: 0 0 1vw 0;
 }
 
 .footer-content li {
-  font-size: 1.3vw;
-}
-
-.footer-content li a {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  font-size: 1.3vw;
-  text-decoration: none;
-  color: white;
-}
-
-.footer-content li a:hover {
-  color: #8e1719;
+  line-height: 30px;
 }
 
 .reserve {
   display: grid;
   place-content: center;
-  font-size: 1vw;
+  font-size: 12px;
   background-color: black;
   text-align: center;
   padding: 1vw 0 1vw 0;
