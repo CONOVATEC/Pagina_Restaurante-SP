@@ -16,15 +16,21 @@
     <!------ENCABEZADO------------------------------------------------>
 
     <header class="header">
-        
+
         <div class="info">
             <i class="fa-solid fa-location-dot"></i>
             <p>León, Guanajuato</p>
-        </div>
 
-        <div class="info">
             <i class="fa-brands fa-whatsapp"></i>
             <p>+52 479 10 10 996</p>
+        </div>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+
         </div>
     </header>
 
@@ -51,27 +57,42 @@
                 <li><a href="/nosotros.html">Nosotros</a></li>
                 <li><a href="/menu.html">Menú</a></li>
                 <li><a href="/contact.html">Contacto</a></li>
+                <li><a href="/register.html">Registrate</a></li>
+                <li><a href="/loggin.html">Iniciar Sesión</a></li>
+
             </ul>
         </div>
     </nav>
 
-
+    <div class="wrapper-modal-gallery " id="wrapper-modal-gallery">
+        <div class="modal-gallery">
+            <div class="close" id="close"></div>
+            <img class="modal-gallery__img" src="img/menu/gallery-2.png" alt="plato">
+            <div class="modal-gallery__content">
+                <h2 class="modal-gallery__name">Gran Banquete Familia</h2>
+                <span class="modal-gallery__price">$10</span>
+                <p class="modal-gallery__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse totam
+                    consectetur!</p>
+                <button class="modal-gallery__add btn-primario btn-primario--red">Hacer el pedido</button>
+            </div>
+        </div>
+    </div>
     <section class="banner-container">
         <div class="banner menu--banner">
             <h2>Menú</h2>
         </div>
-        <div class="down-arrow">
+        <div id="down-arrow" class="down-arrow">
             <img src="/icons/down.svg" alt="Bajar">
         </div>
     </section>
 
-    <section class="section-ofertas padding-container">
+    <section class="section-ofertas padding-container ">
         <div class="container">
             <div class="title">
                 <h2>Prueba Nuestras Ofertas</h2>
             </div>
 
-            <div class="container-tarjetas-ofertas">
+            <div class="container-tarjetas-ofertas animation-fadeIn">
                 <div class="tarjeta-oferta active">
                     <div class="tarjeta-oferta__content">
                         <h3>Gran Banquete Familiar</h3>
@@ -143,7 +164,7 @@
 
             </div>
 
-            <div class="galeria-ofertas-container">
+            <div class="galeria-ofertas-container animation-fadeInTop">
                 <div class="galeria-item">
                     <img class="galeria-item__img" src="/img/menu/gallery-1.png" alt="plato">
                     <div class="galeria-item__descripcion">
@@ -196,15 +217,14 @@
         </div>
     </section>
 
-    <div class="modal-menu-container ">
-        <div id="close" class="close"></div>
-        <div class="wrapper-img"></div>
-        <div class="wrapper-plato">
-            <div class="receta-title">
-                <h2>Gran Banquete Familiar</h2>
-            </div>
-        </div>
-    </div>
+
+
+
+
+    <script src="js/scroll.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/2da10ca441.js" crossorigin="anonymous"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 

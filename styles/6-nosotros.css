@@ -67,16 +67,24 @@
 }
 
 /* --------------------- COMENTARIOS -------------------- */
+.carrousel-comentarios{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2px 2px 2px 2px;
+    overflow: hidden;
+}
 .comentarios-container {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    width: 300%;
+    transition: transform 0.5s ease;
 }
 .comentario {
     padding: 3rem;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.212);
-    max-width: 600px;
-    min-height: 270px;
+    width: calc(100% / 3);
+    padding: 20px;
+    box-sizing: border-box;
 }
 .comentario__description {
     margin-bottom: 21px;
@@ -124,10 +132,25 @@
 }
 
 @media screen and (max-width: 768px) {
+    .carrousel-comentarios{
+        width: 100%;
+    }
     .comentarios-container {
         flex-wrap: wrap;
     }
     .cheft-card {
         flex-basis: 220px;
     }
+}
+
+.nota-flotante {
+    display: block;
+    margin: 0 0px 0px auto;
+    top: 10%;
+    width: 30%;
+}
+
+.nosotros__img {
+    display: block;
+    width: 70%;
 }

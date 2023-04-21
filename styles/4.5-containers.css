@@ -1,4 +1,42 @@
+/* ------------------ CLASES-BOOTRSTRAP ----------------- */
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-baseline {
+    align-items: baseline;
+}
+.mt-1 {
+    margin-top: 0.5rem;
+}
+.ms-1 {
+    margin-left: 0.5rem;
+}
+.me-1 {
+    margin-right: 0.5rem;
+}
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
 /* ---------------------- PADDINGS ---------------------- */
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .padding-container {
     padding: 5.0625rem 0;
