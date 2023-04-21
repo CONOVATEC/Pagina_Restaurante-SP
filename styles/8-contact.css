@@ -1,176 +1,185 @@
 /* ----------------------- BANNER ----------------------- */
 .contact--banner {
-    background-image: url(../img/contacto/banner.png);
+  background-image: url(../img/contacto/banner.png);
 }
 
 .seccion-ubicacion {
-    position: relative;
+  position: relative;
 }
 
 /* ------------------------ FORM ------------------------ */
 .container-form {
-    width: 50%;
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 3.125rem;
+  width: 50%;
+  color: var(--color-blanco);
+  background-color: var(--color-primario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3.125rem;
 }
+
 .form-reservacion {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 2.1875rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.1875rem;
 }
+
 .form-reservacion label {
-    margin-bottom: 6px;
-    display: block;
+  margin-bottom: 6px;
+  display: block;
 }
 
 .form-reservacion .form-input {
-    padding: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    width: 100%;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 100%;
 }
+
 .line-input {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
 .line-input__item {
-    width: 47%;
+  width: 47%;
 }
+
 .select-container select {
-    width: 100%;
+  width: 100%;
 }
+
 .select-container {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .form-reservacion .select-container::after {
-    text-align: center;
-    background: var(--color-blanco);
-    margin-top: 1px;
-    margin-right: 4px;
-    height: 25px;
-    color: var(--color-primario);
-    font-size: 2rem;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    pointer-events: none;
-    content: "\025be";
+  text-align: center;
+  background: var(--color-blanco);
+  margin-top: 1px;
+  margin-right: 4px;
+  height: 25px;
+  color: var(--color-primario);
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
+  content: "\025be";
 }
+
 .form-reservacion h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* ------------------------- MAP ------------------------ */
 
 .ubicacion__map iframe {
-    display: block;
-    margin: 0 0px 0px auto;
-    padding-right: 5rem;
-    width: 70%;
-    min-height: 600px;
+  display: block;
+  margin: 0 0px 0px auto;
+  padding-right: 5rem;
+  width: 70%;
+  min-height: 600px;
 }
 
 @media screen and (max-width: 768px) {
-    .ubicacion__map iframe {
-        width: 100%;
-        padding: 0 1rem;
-        margin: 0 auto;
-    }
+  .ubicacion__map iframe {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
 }
 
-.nota-flotante-right{
-    
-    display: block;
-    margin: 0 0px 0px auto;
-    width: 20%;
+.nota-flotante-right {
+
+  display: block;
+  margin: 0 0px 0px auto;
+  width: 20%;
 }
+
 /*<-------------------------------------------------------------------------->*
 /*Estilo responsive de la imagen antes del Form*/
 
 @media (max-width: 760px) {
-    .contact--banner {
-      background-image: url(../img/contacto/banner-movil.png);
-    }
-  
-    .seccion-ubicacion {
-      position: relative;
-    }
+  .contact--banner {
+    background-image: url('../img/contacto/banner-movil.png');
   }
-  
-  
+
+  .seccion-ubicacion {
+    position: relative;
+  }
+}
+
+
 
 /*Apartador Movil del formulario de contacto */
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
-    /* Estilos para el contenedor principal */
-    .container-form {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    /* Estilos para el formulario */
-    .form-reservacion {
-      max-width: 100%;
-    }
-  
-    /* Estilos para los inputs */
-    .form-input {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    /* Estilos para los select */
-    .select-container {
-      position: relative;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .select-container select {
-      width: 100%;
-      padding-right: 20px;
-      cursor: pointer;
-    }
-  
-    .select-container:after {
-      content: "\f107";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      color: #ccc;
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-  
-    /* Estilos para el botón */
-    .btn-primario {
-      width: 100%;
-      align-items: center;
-    }
+
+  /* Estilos para el contenedor principal */
+  .container-form {
+    width: 100%;
+    padding: 10px;
   }
-  
+
+  /* Estilos para el formulario */
+  .form-reservacion {
+    max-width: 100%;
+  }
+
+  /* Estilos para los inputs */
+  .form-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para los select */
+  .select-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .select-container select {
+    width: 100%;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .select-container:after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #ccc;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  /* Estilos para el botón */
+  .btn-primario {
+    width: 100%;
+    align-items: center;
+  }
+}
 
 
-  @media (max-width: 768px) {
-    .nota-flotante-right {
-      width: 100%;
-      margin: 2rem auto;
-      text-align: center;
-    }
+
+@media (max-width: 768px) {
+  .nota-flotante-right {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .select-container:after {
+}
+
+@media (max-width: 768px) {
+  .select-container:after {
     display: none;
-    }
-    }
+  }
+}
