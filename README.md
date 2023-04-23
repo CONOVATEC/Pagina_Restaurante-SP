@@ -1,44 +1,43 @@
+<p align="center">
+  <img align="center" src="icons/logo.png" width="30%">
+  <h1 align="center">Santo Pollo</h1>
+  <p align="center"><a href="https://restaurante-sp.netlify.app/">Ver en vivo</a> | <a href="https://linktr.ee/conovatec">Siguenos</a> </p>
+  <div align="center">
+<h3><strong><em>Proyecto final</em></strong> del curso "Aprendiendo con NKI"</h3>
+</div>
+<p align="center"><small>Este proyecto implica la creación de un <strong>sitio web desde cero sin la ayuda de frameworks o librerías.</strong> Se espera que el sitio sea de utilidad para cualquier persona y que se aplique todo lo aprendido durante el curso. El tema es de libre elección.</small></p>
+</p>
 
-# 🍗 Página de Restaurante
+```javascript
+const tecnologiasUsadas = ["HTML", "CSS", "JavaScript"];
+```
 
+## 🗻 Lista de objetivos
 
-## 🛠 Acerca del Proyecto
-Este es el Proyecto final de nuestro curso "Aprendiendo con NKI". Se solicito un sitio web que pueda cubrir una necesidad y llegar a ser utilizado por cualquier persona, el tema es libre a nuestra eleccion pero se debe aplicar todo lo aprendido en el curso, desarrollando todo desde cero y creado sin frameworks o librerias.
+- Definir el tema de la página web
+- Diseñar al menos 4 secciones para la página web
+- Crear la estructura HTML y decidir su organización
+- Maquetar y dar estilo a la página web
+- Realizar pruebas de responsividad para la página web
+- Integrar JavaScript para aumentar la interactividad de la página web
+- Desplegar la página web en un servidor para su prueba y publicación
 
+#### 🫡Nuestro objetivo de Proyecto
+
+Vamos a **desarrollar una página web de comida** en la que los visitantes podrán conocer más acerca del restaurante y su equipo de trabajo, **ver los platos que ofrecen junto con sus menús y ofertas**, revisar los horarios de atención y realizar reservaciones en línea.
+
+#### ✨Diseño
+
+**Buscamos crear algo que sea atractivo** para el espectador, sin ser demasiado complejo. Aunque no somos diseñadores profesionales, **hemos utilizado Figma para crear 4 pestañas** que nos sirven como guía.
+
+![diseño.png](C:\Users\piero\Desktop\Pagina_Restaurante-SP\img\diseño.png)
 
 ## 😎 Autores
 
-- Bambamxx
-- Fernando5498
-- adriancapchaq (https://github.com/adriancapchaq)
+👥 Nuestro equipo está compuesto por:
 
+- Bambamxx 💻
+- Fernando5498 🎨
+- [adriancapchaq](https://github.com/adriancapchaq) 🌟
 
-## 🛠 Tecnologias Utilizadas
-- HTML   
-- CSS
-- JavaScript
-
-
-## 🗻 Plan del Proyecto
-
-- [x]  Definir el tema para la Pagina
-- [X]  Diseñar por lo menos 4 Pestañas
-- [ ]  Crear el Esqueleto HTML y decidir que estrucutura llevara el proyecto
-- [ ]  Maquetar y darle Estilos a la pagina
-- [ ]  Testear si es totalmente responsivo
-- [ ]  Integrar JavaScript para dar mas dinamismo en la pagina
-- [ ]  Montarlo en algun servidor para que pueda ser porbado
-
-
-
-#### Definir el Tema
-
-Realizaremos una pagina web de comida, donde podran conocer más sobre el restauran y su personal de trabajo, ver los platos que tienen junto a sus menus, ofertar, horarios de trabajo y dandole la capacidad de crear una reservación.
-
-#### Diseño
-
-Buscamos crear algo no tan complejo pero que sea vistoso para el espectador, no somos diseñadores pero aun asi creamos 4 Perstañas en Figma para guiarnos 
-
-![App Screenshot](https://github.com/bambamxx/pagina_restaurante/blob/main/img/dise%C3%B1o.png)
-
-#### Estructura
+**¡Gracias por tu interés en nuestro proyecto! 🙌**
