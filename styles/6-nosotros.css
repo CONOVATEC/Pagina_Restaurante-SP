@@ -154,3 +154,30 @@
     display: block;
     width: 70%;
 }
+
+@media only screen and (max-width: 600px) {
+    .nosotros__img {
+      text-align: center;
+    
+    
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+
+@media only screen and (max-width: 600px) {
+    .nota-flotante {
+      width: 90%;
+    }
+    .nota-flotante h3 {
+      font-size: 1.2em;
+    }
+    .nota-flotante p {
+      font-size: 0.9em;
+    }
+  }
+  
