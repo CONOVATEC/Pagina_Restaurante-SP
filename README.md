@@ -30,7 +30,7 @@ Vamos a **desarrollar una página web de comida** en la que los visitantes podr�
 
 **Buscamos crear algo que sea atractivo** para el espectador, sin ser demasiado complejo. Aunque no somos diseñadores profesionales, **hemos utilizado Figma para crear 4 pestañas** que nos sirven como guía.
 
-![diseño.png](.\img\diseño.png)
+![diseño.png](img/diseño.png)
 
 ## 😎 Autores
 
