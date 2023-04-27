@@ -32,6 +32,18 @@ Vamos a **desarrollar una página web de comida** en la que los visitantes podr�
 
 ![diseño.png](img/diseño.png)
 
+## 📚 Documentación
+
+En proyectos de software alojados en Git y GitHub, es común tener diferentes ramas para los ambientes de **desarrollo** y **producción**. La rama principal suele ser la de desarrollo, donde los desarrolladores trabajan en el código de la aplicación y realizan pruebas. Una vez que se aseguran de que el código funciona correctamente, se puede fusionar la rama de desarrollo con la de producción.
+
+### 🚀 Producción
+
+En el ambiente de producción es importante asegurarse de que el código esté en un estado estable y funcional antes de ser desplegado. Es recomendable utilizar la rama de producción como una rama protegida, donde solo los miembros con los permisos adecuados puedan realizar cambios y desplegar en producción. Además, se debe tener en cuenta que cualquier cambio en producción puede afectar a los usuarios finales, por lo que se recomienda hacer pruebas exhaustivas antes de desplegar en producción.
+
+### 💻 Desarrollo
+
+En el ambiente de desarrollo se trabaja en el código de la aplicación y se realizan pruebas para asegurarse de que funciona correctamente. Es importante mantener una buena separación entre los ambientes de desarrollo y producción para prevenir problemas inesperados. **Nunca se deben realizar pruebas en el ambiente de producción**, ya que esto puede afectar a los usuarios y generar problemas en la aplicación. Por lo tanto, cualquier cambio en el código debe ser probado en el ambiente de desarrollo antes de ser desplegado en producción.
+
 ## 😎 Autores
 
 👥 Nuestro equipo está compuesto por:
