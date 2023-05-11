@@ -108,7 +108,7 @@
   grid-template-columns: repeat(1, 1fr);
   background-color: #8e1719;
   color: white;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 
 .cocina img {
@@ -143,6 +143,47 @@
   text-align: center;
   color: var(--color-secundario);
   font-size: 4rem;
+}
+/* Horarios */
+.horarios {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 4rem;
+  border-top: 15px double  #8e1719;
+  border-bottom: 15px double #8e1719;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.horarios img {
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.restaurant-schedule {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.schedule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-item {
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 /* Bisteck */
 
@@ -336,13 +377,4 @@
 
 .footer-content li {
   line-height: 30px;
-}
-
-.reserve {
-  display: grid;
-  place-content: center;
-  font-size: 12px;
-  background-color: black;
-  text-align: center;
-  padding: 1vw 0 1vw 0;
 }
